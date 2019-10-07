@@ -1,0 +1,70 @@
+body {
+ background-color: LightGray;
+}
+
+#login-box {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px;
+  margin:auto;
+  width: 20%;
+  text-align: center;
+  position:relative;
+  top:50%;
+  transform: translateY(30%);
+}
+
+#login-img {
+  padding-bottom: 30px;
+}
+
+.loginLinks {
+  padding: 30px;
+  text-decoration: none;
+}
+
+.loginLinks:hover {
+  text-decoration: underline;
+}
+
+.inputLogin {
+  margin-top: 3px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+
+.inputSubmit {
+  margin-top: 3px;
+  margin-bottom: 30px;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+#newEvent{
+  float: left;
+  padding-left: 15px;
+}
+
+nav{
+  float: right;
+  padding-left: 15px;
+  display: block;
+}
+
+
+#staff{
+width:30%;
+  display: block;
+}
+
+
+#events{
+width: 30%;
+  display: block;
+}
+
+#account{
+width: 30%;
+  float: block;
+}
