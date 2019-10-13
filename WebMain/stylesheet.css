@@ -105,3 +105,8 @@ body {
 tr{
   text-align: center;
 }
+
+.add-profile{
+  padding-top: 20px;
+  width: 100%;
+}
