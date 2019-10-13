@@ -97,8 +97,9 @@ body {
   border: 1px solid black;
 }
 
-.width90{
+.width100{
   width: 100%;
+  text-align: center;
 }
 
 tr{
