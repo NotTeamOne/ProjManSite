@@ -191,3 +191,14 @@ body {font-family: Verdana, sans-serif;}
   background: #1abc9c;
   color: white !important
 }
+
+
+
+.user-image{
+  float: left;
+  background-color: #800080;
+  width:10%;
+  height: 10%;
+  margin-top: 10%;
+  padding: 5%;
+}
