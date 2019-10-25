@@ -26,7 +26,30 @@
   </header>
 
     <div class="add-profile">
-      <img src="images/addProfile.png" alt="Add Profile">
+      <img src="images/addProfile.png" alt="Add Profile" onclick="openForm()">
+      <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <h1>Add Profile</h1>
+
+            <label for="fname"><b></b></label>
+            <input type="text" placeholder="Enter First Name" name="fname" required>
+
+            <label for="fName"><b></b></label>
+            <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+            <button type="addProfile" class="btn">Login</button>
+            <button type="close" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+          <script>
+          function openForm() {
+            document.getElementById("myForm").style.display = "block";
+          }
+
+          function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+          }
+          </script>
+        </div>
     </div>
 
     <div class="width100">
