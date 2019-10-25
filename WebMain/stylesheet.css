@@ -211,26 +211,22 @@ body {font-family: Verdana, sans-serif;}
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
+  width: 500px;
   display: none;
   border: 3px solid #f1f1f1;
 }
 
-/* The popup form - hidden by default */
-
-
-
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 300px;
+  max-width: 500px;
   padding: 10px;
   background-color: white;
 }
 
 /* Full-width input fields */
-.form-container input[type=text] {
-  width: 100%;
+.form-container input[type=text], #staffType, #Skills {
+  width: 450px;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
@@ -238,10 +234,23 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus {
+.form-container input[type=text]:focus, #staffType, #Skills {
   background-color: #ddd;
   outline: none;
 }
+
+#Skills {
+  width: 450px;
+  height: 200px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
 
 /* Set a style for the submit/login button */
 .form-container .btn {
@@ -250,7 +259,7 @@ body {font-family: Verdana, sans-serif;}
   padding: 16px 20px;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 450px;
   margin-bottom:10px;
   opacity: 0.8;
 }

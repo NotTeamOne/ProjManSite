@@ -31,14 +31,27 @@
           <form action="/action_page.php" class="form-container">
             <h1>Add Profile</h1>
 
-            <label for="fname"><b></b></label>
+            <label for="fname"><b></b>First Name</label>
             <input type="text" placeholder="Enter First Name" name="fname" required>
 
-            <label for="fName"><b></b></label>
+            <label for="fName"><b></b>Last Name</label>
             <input type="text" placeholder="Enter Last Name" name="lname" required>
 
-            <button type="addProfile" class="btn">Login</button>
+            <label for="staffType">Type of Staff</label>
+              <select id="staffType" name="staffType">
+                <option value="Admin">Admin</option>
+                <option value="Student Ambassador">Student Ambassador</option>
+                <option value="Staff">Staff</option>
+              </select>
+
+            <label for="skills" id="skills">Skills</label>
+
+              <textarea></textarea>
+
+            <button type="addProfile" class="btn">Add</button>
             <button type="close" class="btn cancel" onclick="closeForm()">Close</button>
+
+
           </form>
           <script>
           function openForm() {
@@ -50,7 +63,6 @@
           }
           </script>
         </div>
-    </div>
 
     <div class="width100">
       <h1 class="borderStyle">Profile Database</h1>
