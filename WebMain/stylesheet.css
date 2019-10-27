@@ -190,13 +190,21 @@ body {font-family: Verdana, sans-serif;}
 
 
 
-.user-image{
+#profile{
   float: left;
   background-color: #800080;
-  width:10%;
-  height: 10%;
-  margin-top: 10%;
-  padding: 5%;
+  margin-top: 20px;
+  width: 90%;
+}
+
+.user-image{
+  background-color: #400040;
+  float: left;
+  padding: 20px;
+}
+
+.dropdown{
+  padding: 0;
 }
 
 /* Add profile form */
