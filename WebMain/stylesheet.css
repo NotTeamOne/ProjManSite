@@ -225,7 +225,7 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* Full-width input fields */
-.form-container input[type=text], #staffType, #Skills {
+.form-container input[type=text], #staffType, #Skills, #staffNum, #skillsNeeded, #assignStaff{
   width: 450px;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -234,7 +234,7 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus, #staffType, #Skills {
+.form-container input[type=text]:focus, #staffType, #Skills, #staffNum, #skillsNeeded, #assignStaff{
   background-color: #ddd;
   outline: none;
 }

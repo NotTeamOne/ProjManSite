@@ -18,15 +18,75 @@
       <div class="nav-bar">
         <a href="Staff.html"><img src="images/Staff.png"></a>
         <a href="Events.html"><img src="images/Events.png"></a>
-        <a href=Accounts.html><img src="images/Account.png"></a>
+        <a href="Accounts.html"><img src="images/Account.png"></a>
       </div>
     </nav>
 
 
   </header>
+
   <div id="newEvent">
-    <a href=""><img src="images/CreateEvent.png"></a>
-  </div>
+    <img src="images/CreateEvent.png" onclick="openForm()"></a>
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+          <h1>Create Event</h1>
+
+          <label for="name"><b></b>Event Name</label>
+          <input type="text" placeholder="Event Name" name="name" required>
+
+          <label for="description"><b></b>Description</label>
+          <input type="text" placeholder="Add Description" name="description" required>
+
+          <label for="num0fStaff">Number of Staff Needed</label>
+            <select id="staffNum" name="staffNum">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+          <label for="skillsNeeded">Skills Needed</label>
+            <select id="skillsNeeded" name="skillsNeeded">
+              <option value="skill1">Skills1 Placeholder</option>
+              <option value="skill2">Skills2 Placeholder</option>
+              <option value="skill3">Skills3 Placeholder</option>
+              <option value="skill4">Skills4 Placeholder</option>
+              <option value="skill5">Skills5 Placeholder</option>
+            </select>
+
+
+          <label for="Assign Staff">Assign Staff</label>
+            <select id="assignStaff" name="assignStaff">
+              <option value="staff1">Staff1 Placeholder</option>
+              <option value="staff2">Staff2 Placeholder</option>
+              <option value="staff3">Staff3 Placeholder</option>
+              <option value="staff4">Staff4 Placeholder</option>
+              <option value="staff5">Staff5 Placeholder</option>
+            </select>
+
+
+          <button type="createEvent" class="btn" action="/action_page.php">Create Event</button>
+          <button type="close" class="btn cancel" onclick="closeForm()" onclick="resetForm()">Close</button>
+
+
+        </form>
+        <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+
+        function resetForm() {
+          document.getElementById("myForm").reset();
+        }
+        </script>
+      </div>
+
+
   <div id="FullWidth">
     <div class="width25">
       <h1 class="borderStyle">Calendar</h1>

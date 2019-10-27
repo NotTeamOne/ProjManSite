@@ -18,7 +18,7 @@
       <div class="nav-bar">
         <a href="Staff.html"><img src="images/Staff.png" alt="Staff"></a>
         <a href="Events.html"><img src="images/Events.png" alt="Events"></a>
-        <a href=Accounts.html><img src="images/Account.png" alt="Account"></a>
+        <a href="Accounts.html"><img src="images/Account.png" alt="Account"></a>
       </div>
     </nav>
 
@@ -28,7 +28,7 @@
     <div class="add-profile">
       <img src="images/addProfile.png" alt="Add Profile" onclick="openForm()">
       <div class="form-popup" id="myForm">
-          <form action="/action_page.php" class="form-container">
+          <form class="form-container">
             <h1>Add Profile</h1>
 
             <label for="fname"><b></b>First Name</label>
@@ -48,8 +48,8 @@
 
               <textarea></textarea>
 
-            <button type="addProfile" class="btn">Add</button>
-            <button type="close" class="btn cancel" onclick="closeForm()">Close</button>
+            <button type="addProfile" class="btn" action="/action_page.php">Add</button>
+            <button type="close" class="btn cancel" onclick="closeForm()" onclick="resetForm()">Close</button>
 
 
           </form>
@@ -59,10 +59,16 @@
           }
 
           function closeForm() {
+            document.getElementById("myForm").reset();
             document.getElementById("myForm").style.display = "none";
+          }
+
+          function resetForm() {
+            document.getElementById("myForm").reset();
           }
           </script>
         </div>
+      </div>
 
     <div class="width100">
       <h1 class="borderStyle">Profile Database</h1>
