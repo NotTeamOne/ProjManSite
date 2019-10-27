@@ -154,15 +154,68 @@
             <th>Time</th>
             <th>Date</th>
             <th>Staff</th>
-            <th>Progress</th>
+            <th>Status</th>
         </thead>
           <tr>
             <td><a href="#">Event One</a></td>
             <td>Time</td>
             <td>Date</td>
             <td>Staff</td>
-            <th><a href="#">Progress</th>
-          </tr>
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+                </tr>
+              <div class="progressForm" id="progressForm">
+                  <form class="progressForm">
+                    <h1>Progress</h1>
+                    <label id="name"><b></b>Event Name</label>
+
+                    <label id="dateCreated"><b></b>Date Created</label>
+
+                    <label id="assignedStaff"><b></b>Assigned Staff</label>
+                    <label class="container">Staff Name 1
+                      <input type="checkbox" checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Staff Name 2
+                      <input type="checkbox" checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Staff Name
+                      <input type="checkbox" checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+
+                    <label id="description"><b></b>Description</label>
+                    <input type="text" placeholder="Add Description" name="description" required>
+
+
+                      <label id="eventSkills">Skills Needed</label>
+                          <ul>
+                            <li>Skill 1</li>
+                            <li>Skill 2</li>
+                            <li>Skill 3</li>
+                          </ul> 
+
+                    <button type="close" class="btn cancel" onclick="closeProgessForm()" onclick="resetProgressForm()">Close</button>
+                  </form>
+
+                  <script>
+                  function openProgressForm() {
+                    document.getElementById("progressForm").style.display = "block";
+                  }
+
+                  function closeProgessForm() {
+                    document.getElementById("progressForm").style.display = "none";
+                  }
+
+                  function resetProgressForm() {
+                    document.getElementById("progressForm").reset();
+                  }
+                  </script>
+                </div>
+              </table>
+
+
+
 
 
 </body>

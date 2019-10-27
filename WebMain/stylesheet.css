@@ -114,10 +114,6 @@ tr{
 
 
 
-
-
-
-
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}
 
@@ -206,7 +202,7 @@ body {font-family: Verdana, sans-serif;}
 /* Add profile form */
 {box-sizing: border-box;}
 
-.form-popup {
+.form-popup, .progressForm{
   position: fixed;
   top: 50%;
   left: 50%;
@@ -216,9 +212,14 @@ body {font-family: Verdana, sans-serif;}
   border: 3px solid #f1f1f1;
 }
 
+#name, #dateCreated, #assignedStaff, #description, #eventSkills{
+  display: block;
+  width: 100%;
+}
+
 
 /* Add styles to the form container */
-.form-container {
+.form-container, .progressForm {
   max-width: 500px;
   padding: 10px;
   background-color: white;
@@ -239,7 +240,7 @@ body {font-family: Verdana, sans-serif;}
   outline: none;
 }
 
-#Skills {
+#Skills{
   width: 450px;
   height: 200px;
   padding: 12px 30px;
@@ -253,7 +254,7 @@ body {font-family: Verdana, sans-serif;}
 
 
 /* Set a style for the submit/login button */
-.form-container .btn {
+.form-container .btn{
   background-color: #4CAF50;
   color: white;
   padding: 16px 30px;
@@ -265,11 +266,11 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* Add a red background color to the cancel button */
-.form-container .cancel {
+.form-container .cancel ,.progressForm .cancel{
   background-color: red;
 }
 
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover, .open-button:hover, .progressForm .cancel{
   opacity: 1;
 }
