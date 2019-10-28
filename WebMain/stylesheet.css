@@ -300,6 +300,6 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover, .progressForm .btn:hover{
+.form-container .btn:hover, .open-button:hover, .progressForm .btn:hover, .notificationForm .btn:hover{
   opacity: 1;
 }
