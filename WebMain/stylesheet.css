@@ -213,7 +213,7 @@ body {font-family: Verdana, sans-serif;}
 /* Add profile form */
 {box-sizing: border-box;}
 
-.form-popup, .progressForm, .notificationForm{
+.form-popup, .progressForm, .notificationForm, .newProfileForm{
   position: fixed;
   top: 50%;
   left: 50%;
@@ -232,7 +232,7 @@ body {font-family: Verdana, sans-serif;}
 
 
 /* Add styles to the form container */
-.form-container, .progressForm, .notificationForm {
+.form-container, .progressForm, .notificationForm, .newProfileForm{
   max-width: 500px;
   padding: 10px;
   background-color: white;
@@ -240,7 +240,7 @@ body {font-family: Verdana, sans-serif;}
 
 /* Full-width input fields */
 .form-container input[type=text], #staffType, #Skills, #staffNum, #skillsNeeded, #assignStaff{
-  width: 450px;
+  width: 460px;
   padding: 5px;
   margin: 15px 0 22px 0;
   border: none;
@@ -255,7 +255,7 @@ body {font-family: Verdana, sans-serif;}
 
 /* Thanos did nothing wrong */
 #Skills{
-  width: 450px;
+  width: 470px;
   height: 200px;
   padding: 12px 20px;
   box-sizing: border-box;
@@ -279,21 +279,24 @@ body {font-family: Verdana, sans-serif;}
   padding: 16px 30px;
   border: none;
   cursor: pointer;
-  width: 450px;
+  width: 470px;
   margin-bottom:10px;
   opacity: 0.8;
 }
 
 /* Add a red background color to the cancel button */
-.form-container .cancel ,.progressForm .cancel, .notificationForm .cancel{
+.form-container .cancel ,.progressForm .cancel, .notificationForm .cancel, .newProfileForm .cancel{
   background-color: red;
-  width: 450px;
-  cursor: pointer;
-  font-size: 20px;
-  height:30px;
-  width:100px;
+
   top:50%;
   left:50%;
+  color: white;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  width: 470px;
+  margin-bottom:10px;
+  opacity: 0.8;
 }
 
 /* Add some hover effects to buttons */
