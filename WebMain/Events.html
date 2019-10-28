@@ -19,6 +19,57 @@
         <a href="Staff.html"><img src="images/Staff.png"></a>
         <a href="Events.html"><img src="images/Events.png"></a>
         <a href="Accounts.html"><img src="images/Account.png"></a>
+        <a href="#" onclick="openNotificationForm()">Notifications</th>
+          <div class="notificationForm" id="notificationForm">
+              <form class="notificationForm">
+                <h1>Progress</h1>
+                <label id="name"><b></b>Open day</label>
+
+                <label id="date"><b></b>2nd of November 2019</label>
+                <label id="time"><b>10AM - 2PM</b></label>
+
+                <label id="assignedStaff"><b></b>Assigned Staff</label>
+                <label class="container">Staff Name 1
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">Staff Name 2
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">Staff Name
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label id="description"><b></b>Description</label>
+                <input readonly type="text"  name="descriptionOfEvent" value="Our Open Days are your opportunity to start an educational journey which not only provides you with detailed subject knowledge but also to become a skilled, capable graduate who is prepared for the world of work.">
+
+
+                  <label id="eventSkills">Skills Needed</label>
+                      <ul>
+                        <li>Skill 1</li>
+                        <li>Skill 2</li>
+                        <li>Skill 3</li>
+                      </ul>
+
+                <button type="close" class="btn cancel" onclick="closeNotificationForm()" onclick="resetNotificationForm()">Close</button>
+              </form>
+
+              <script>
+              function openNotificationForm() {
+                document.getElementById("notificationForm").style.display = "block";
+              }
+
+              function closeNotificationForm() {
+                document.getElementById("notificationForm").style.display = "none";
+              }
+
+              function resetNotificationForm() {
+                document.getElementById("notificationForm").reset();
+              }
+              </script>
+
       </div>
     </nav>
 
