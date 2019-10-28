@@ -19,59 +19,50 @@
         <a href="Staff.html"><img src="images/Staff.png"></a>
         <a href="Events.html"><img src="images/Events.png"></a>
         <a href="Accounts.html"><img src="images/Account.png"></a>
-        <a href="#" onclick="openNotificationForm()">Notifications</th>
-          <div class="notificationForm" id="notificationForm">
-              <form class="notificationForm">
-                <h1>Progress</h1>
-                <label id="name"><b></b>Open day</label>
+</nav>
+<div id="notificationContainer">
+      <!-- Trigger/Open notification popup -->
+<button id="notificationButton" style="float: right">Notifications</button>
 
-                <label id="date"><b></b>2nd of November 2019</label>
-                <label id="time"><b>10AM - 2PM</b></label>
+<!-- notification popup -->
+<div id="notificationPopup" class="notificationPopup">
 
-                <label id="assignedStaff"><b></b>Assigned Staff</label>
-                <label class="container">Staff Name 1
-                  <input type="checkbox" checked="checked">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="container">Staff Name 2
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                </label>
-                <label class="container">Staff Name
-                  <input type="checkbox" checked="checked">
-                  <span class="checkmark"></span>
-                </label>
+  <!-- notification content -->
+  <div class="notification-content">
+    <span class="close">&times;</span>
+    <p>Notifications</p>
+  </div>
 
-                <label id="description"><b></b>Description</label>
-                <input readonly type="text"  name="descriptionOfEvent" value="Our Open Days are your opportunity to start an educational journey which not only provides you with detailed subject knowledge but also to become a skilled, capable graduate who is prepared for the world of work.">
+</div>
 
+<script>
+// Get the modal
+var modal = document.getElementById("notificationPopup");
 
-                  <label id="eventSkills">Skills Needed</label>
-                      <ul>
-                        <li>Skill 1</li>
-                        <li>Skill 2</li>
-                        <li>Skill 3</li>
-                      </ul>
+// Get the button that opens the modal
+var btn = document.getElementById("notificationButton");
 
-                <button type="close" class="btn cancel" onclick="closeNotificationForm()" onclick="resetNotificationForm()">Close</button>
-              </form>
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-              <script>
-              function openNotificationForm() {
-                document.getElementById("notificationForm").style.display = "block";
-              }
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
 
-              function closeNotificationForm() {
-                document.getElementById("notificationForm").style.display = "none";
-              }
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
-              function resetNotificationForm() {
-                document.getElementById("notificationForm").reset();
-              }
-              </script>
-
-      </div>
-    </nav>
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</div>
 
 
   </header>
