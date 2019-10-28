@@ -220,10 +220,12 @@ body {font-family: Verdana, sans-serif;}
   border: 3px solid #f1f1f1;
 }
 
-#name, #dateCreated, #assignedStaff, #description, #eventSkills{
+#name, #date, #time, #assignedStaff, #description, #eventSkills{
   display: block;
   width: 100%;
 }
+
+
 
 
 /* Add styles to the form container */
@@ -279,6 +281,6 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover, .progressForm .cancel{
+.form-container .btn:hover, .open-button:hover, .progressForm .btn:hover{
   opacity: 1;
 }
