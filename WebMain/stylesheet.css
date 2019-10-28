@@ -199,6 +199,20 @@ body {font-family: Verdana, sans-serif;}
   border: 2px solid black;
 }
 
+.event-list{
+  padding: 30px;
+  float: right;
+  margin-top: 20px;
+  width: 30%;
+  margin-right: 100px;
+  border: 2px solid black;
+}
+
+.event-list li{
+
+  list-style: circle;
+}
+
 .user-image{
   background-color: #BA55D3;
   float: left;
