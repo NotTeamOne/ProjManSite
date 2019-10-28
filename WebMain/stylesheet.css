@@ -371,3 +371,7 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+#textbox{
+  width:100%;
+}
