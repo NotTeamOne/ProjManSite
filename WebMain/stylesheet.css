@@ -227,7 +227,7 @@ body {font-family: Verdana, sans-serif;}
 /* Add profile form */
 {box-sizing: border-box;}
 
-.form-popup, .progressForm, .notificationForm, .newProfileForm{
+.form-popup, .progressForm, .notificationForm, .newProfileForm, .eventForm{
   position: fixed;
   top: 50%;
   left: 50%;
@@ -246,7 +246,7 @@ body {font-family: Verdana, sans-serif;}
 
 
 /* Add styles to the form container */
-.form-container, .progressForm, .notificationForm, .newProfileForm{
+.form-container, .progressForm, .notificationForm, .newProfileForm, .eventForm{
   max-width: 500px;
   padding: 10px;
   background-color: white;
@@ -299,7 +299,7 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* Add a red background color to the cancel button */
-.form-container .cancel ,.progressForm .cancel, .notificationForm .cancel, .newProfileForm .cancel{
+.form-container .cancel ,.progressForm .cancel, .notificationForm .cancel, .newProfileForm .cancel, .eventForm .cancel{
   background-color: red;
   top:50%;
   left:50%;
@@ -313,7 +313,7 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover, .progressForm .btn:hover, .notificationForm .btn:hover{
+.form-container .btn:hover, .open-button:hover, .progressForm .btn:hover, .notificationForm .btn:hover, .eventForm .btn:hover{
   opacity: 1;
 }
 /* The Modal (background) */

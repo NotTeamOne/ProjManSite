@@ -237,7 +237,7 @@ window.onclick = function(event) {
             <th>Status</th>
         </thead>
           <tr>
-            <td><a href="#">Event One</a></td>
+            <td><a href="#" onclick="openEventForm()">Event One</a></td>
             <td>14:00</td>
             <td>28/11/2019</td>
             <td>John Smith, Jane Doe</td>
@@ -245,7 +245,7 @@ window.onclick = function(event) {
             <th><a href="#" onclick="openProgressForm()">Status</th>
           </tr>
           <tr>
-            <td><a href="#">Event Two</a></td>
+            <td><a href="#" onclick="openEventForm()">Event Two</a></td>
             <td>12:00</td>
             <td>12/12/2019</td>
             <td>John Doe, John Smith</td>
@@ -303,6 +303,57 @@ window.onclick = function(event) {
                   }
                   </script>
                 </div>
+
+                <div class="eventForm" id="eventForm">
+                    <form class="eventForm">
+                      <h1>Event</h1>
+                      <label id="name"><b></b>Open day</label>
+
+                      <label id="date"><b></b>2nd of November 2019</label>
+                      <label id="time"><b>10AM - 2PM</b></label>
+
+                      <label id="assignedStaff"><b></b>Assigned Staff</label>
+                      <label class="container">John Smith
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container">Jane Dawson
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container">Micheal Sheen
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+
+                      <label id="description"><b></b>Description</label>
+                      <textarea readonly type="text" ROWS="5" COLS="90" name="descriptionOfEvent" id="textbox">Our Open Days are your opportunity to start an educational journey which not only provides you with detailed subject knowledge but also to become a skilled, capable graduate who is prepared for the world of work.</textarea>
+
+
+                        <label id="eventSkills">Skills Needed</label>
+                            <ol>
+                              <li>Web Design</li>
+                              <li>Knowledge of Raspberry Pi</li>
+                              <li>HTML</li>
+                            </ol>
+
+                      <button type="close" class="btn cancel" onclick="closeEventForm()" onclick="resetEventForm()">Close</button>
+                    </form>
+
+                    <script>
+                    function openEventForm() {
+                      document.getElementById("eventForm").style.display = "block";
+                    }
+
+                    function closeEventForm() {
+                      document.getElementById("eventForm").style.display = "none";
+                    }
+
+                    function resetEventForm() {
+                      document.getElementById("eventForm").reset();
+                    }
+                    </script>
+                  </div>
               </table>
 
 
