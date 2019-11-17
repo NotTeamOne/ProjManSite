@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  <title>Sorted - Profile Page</title>
+
+
+  <script>
+  function openCommentsForm() {
+    document.getElementById("newCommentsForm").style.display = "block";
+  }
+
+
+  function closeForm() {
+    document.getElementById("newCommentsForm").style.display = "none";
+  }
+
+  function resetForm() {
+    document.getElementById("newCommentsForm").reset();
+  }
+  </script>
+
+
+
+</head>
+
+<body>
+  <header>
+    <nav class="nav-container">
+      <div class="nav-image">
+        <a href="Events.html">
+          <img id="nav-img" src="images/logoPlaceholder.png" alt="SiteLogo">
+        </a>
+      </div>
+      <div class="nav-bar">
+        <a href="Staff.html"><img src="images/Staff.png"></a>
+        <a href="Events.html"><img src="images/Events.png"></a>
+        <a href="Accounts.html"><img src="images/Account.png"></a>
+      </div>
+    </nav>
+
+    <div class="width100">
+      <h1 class="borderStyle">Your Account Page</h1>
+    </div>
+
+    <div id="profile">
+      <div class="user-image">
+        <img src="images/blank-user.png" alt="blank-user-image">
+      </div>
+
+    <h1>John Smith</h1>
+    <br>
+    <h1>User Type</h1>
+    <select id="dropdown">
+      <option value="staff">Staff</option>
+      <option value="admin">Admin</option>
+      <option value="student-ambassador">Student Ambassador</option>
+    </select>
+
+    <h1>Last Event</h1>
+    <h5>Open Day</h5>
+
+    <h1>Skills</h1>
+    <h5>Leadership, Planning, Web Design</h5>
+
+  </div>
+
+  <div class="event-list">
+    <h1>All Past Events</h1>
+    <ul>
+      <li>Open Day</li>
+      <li>Hack-a-thon</li>
+      <li>ComSoc AGM</li>
+    </ul>
+
+
+  <div class="current-events">
+    <h1>Events In Progress</h1>
+    <table>
+      <tr>
+        <td>Open Day 2019</td><td>Mark As Done <input type="checkbox"></input></td><td><a href="#" onclick="openCommentsForm()">Add Comment</a>
+          <form class="form-popup" id="newCommentsForm" style="background-color:white">
+            <form class="form-container">
+              <h1>Add Comments</h1>
+
+              <textarea placeholder="Comments"></textarea>
+
+              <br>
+              <button type="button" name="button" onclick="closeForm()" onclick="resetForm">Add Comment</button>
+            </form>
+          </form>
+
+        </td>
+      </tr>
+    </table>
+
+  </div>
+</div>
+
+
+<!-- <div class="form-popup" id="newCommentsForm"> -->
+
+</html>

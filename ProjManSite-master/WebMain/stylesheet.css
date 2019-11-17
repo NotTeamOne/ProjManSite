@@ -1,0 +1,376 @@
+/* General settings */
+body {
+  background-color: LightGray;
+}
+
+.nav-image {
+  float: left;
+}
+
+#nav-img {
+  height: 100px;
+  padding-left: 5px;
+}
+
+.nav-container{
+  width:100%;
+  height:100px;
+  background-color: #555555;
+}
+.nav-bar {
+	height:100px;
+	width:60%;
+	float:right;
+}
+
+.nav-bar a {
+  float: right;
+  padding: 25px 12px ;
+  text-align: center;
+}
+
+.nav-bar img {
+	height: 50px;
+}
+
+/* Login page related css */
+#login-box {
+  border-radius: 25px;
+  border: 2px solid #824277;
+  padding: 20px;
+  margin: auto;
+  width: 20%;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(30%);
+}
+
+#login-img {
+  padding-bottom: 30px;
+  width: 155px;
+  height: 155px;
+}
+
+.loginLinks {
+  padding: 30px;
+  text-decoration: none;
+}
+
+/*Just Monica*/
+.loginLinks:hover {
+  text-decoration: underline;
+}
+
+.inputLogin {
+  margin-top: 3px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.inputSubmit {
+  margin-top: 3px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+/* Events page related css */
+#newEvent {
+  padding-top: 20px;
+  width: 100%;
+}
+
+#FullWidth {
+  width: 100%;
+}
+
+.width25{
+  width: 25%;
+  float: left;
+}
+
+.width75{
+  width: 73%;
+  float: right;
+}
+
+.borderStyle {
+  border: 1px solid black;
+}
+
+.width100{
+  width: 100%;
+  text-align: center;
+}
+
+tr{
+  text-align: center;
+}
+
+.add-profile{
+  padding-top: 20px;
+  width: 100%;
+}
+
+
+
+
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+/* Month header */
+.month {
+  padding: 70px 25px;
+  width: 90%;
+  background: #800080;
+  text-align: center;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color:#ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13%;
+  color: #666;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+
+#profile{
+  padding: 30px;
+  float: left;
+  margin-top: 20px;
+  width: 30%;
+  margin-left: 100px;
+  border: 2px solid black;
+}
+
+.event-list{
+  padding: 30px;
+  float: right;
+  margin-top: 20px;
+  width: 30%;
+  margin-right: 100px;
+  border: 2px solid black;
+}
+
+.event-list li{
+
+  list-style: circle;
+}
+
+.user-image{
+  background-color: #BA55D3;
+  float: left;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.dropdown{
+  padding: 0;
+}
+
+/* Add profile form */
+{box-sizing: border-box;}
+
+.form-popup, .progressForm, .notificationForm, .newProfileForm, .eventForm{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 490px;
+  display: none;
+  border: 3px solid #f1f1f1;
+}
+
+#name, #date, #time, #assignedStaff, #description, #eventSkills{
+  display: block;
+  width: 100%;
+}
+
+
+
+
+/* Add styles to the form container */
+.form-container, .progressForm, .notificationForm, .newProfileForm, .eventForm{
+  max-width: 500px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], #staffType, #Skills, #staffNum, #skillsNeeded, #assignStaff{
+  width: 460px;
+  padding: 5px;
+  margin: 15px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, #staffType, #Skills, #staffNum, #skillsNeeded, #assignStaff{
+  background-color: #ddd;
+  outline: none;
+}
+
+#Skills{
+  width: 470px;
+  height: 200px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+.descriptionOfEvent{
+  font-size: 20px;
+}
+
+
+
+/* Set a style for the submit/login button */
+.form-container .btn{
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  width: 470px;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel ,.progressForm .cancel, .notificationForm .cancel, .newProfileForm .cancel, .eventForm .cancel{
+  background-color: red;
+  top:50%;
+  left:50%;
+  color: white;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  width: 470px;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover, .progressForm .btn:hover, .notificationForm .btn:hover, .eventForm .btn:hover{
+  opacity: 1;
+}
+/* The Modal (background) */
+.notificationPopup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.notification-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#textbox{
+  width:100%;
+}

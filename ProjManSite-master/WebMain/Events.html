@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  <title>Sorted - Events</title>
+</head>
+
+<body>
+  <header>
+    <nav class="nav-container">
+      <div class="nav-image">
+        <a href="Events.html">
+          <img id="nav-img" src="images/logoPlaceholder.png" alt="SiteLogo">
+        </a>
+      </div>
+      <div class="nav-bar">
+        <a href="Staff.html"><img src="images/Staff.png"></a>
+        <a href="Events.html"><img src="images/Events.png"></a>
+        <a href="Accounts.html"><img src="images/Account.png"></a>
+</nav>
+<div id="notificationContainer">
+      <!-- Trigger/Open notification popup -->
+<button id="notificationButton" style="float: right">Notifications</button>
+
+<!-- notification popup -->
+<div id="notificationPopup" class="notificationPopup">
+
+  <!-- notification content -->
+  <div class="notification-content">
+    <span class="close">&times;</span>
+    <h1>Notifications</h1>
+    <table>
+  <tr>
+    <th>Subject</th>
+    <th>Message</th>
+  </tr>
+  <tr>
+    <td>Event In Progress</td>
+    <td>The event "November Open Day" is now in progress</td>
+  </tr>
+  <tr>
+    <td>Event Confirmation</td>
+    <td>John Smith has confirmed they can do event "November Open Day" on 02/11/19 </td>
+  </tr>
+  <tr>
+    <td>Task in Progress</td>
+    <td>Jane Dawson has marked task "Prepare Powerpoint" as In Progress for the event "Hackathon"</td>
+  </tr>
+  <tr>
+    <td>Task Completed</td>
+    <td>Tom Robinson has marked task "Setup Raspberry Pi's" as Complete for the event "Hackathon"</td>
+  </tr>
+  <tr>
+    <td>Task Deadline Approaching</td>
+    <td>The task "Reserve Computer Lab" has not been started. Task due for 5/11/19</td>
+  </tr>
+  <tr>
+    <td>Event Completed</td>
+    <td>The Event "1st Year Induction" has been completed. Event has been added to the profiles of staff & student ambassadors who attended.</td>
+  </tr>
+  <tr>
+    <td>Task Feedback Given</td>
+    <td>Mark Zarb has given feedback on the task "Prepare Lab Sheet" that was completed by Michael Sheen</td>
+  </tr>
+  <tr>
+    <td>Skill Request</td>
+    <td>Michael Sheen has requested to add the skill "Adobe Photoshop" to their Student Ambassador profile </td>
+  </tr>
+</table>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("notificationPopup");
+
+// Get the button that opens the modal
+var btn = document.getElementById("notificationButton");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</div>
+
+
+  </header>
+
+  <div id="newEvent">
+    <img src="images/CreateEvent.png" onclick="openForm()"></a>
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+          <h1>Create Event</h1>
+
+          <label for="name"><b></b>Event Name</label>
+          <input type="text" placeholder="Event Name" name="name" required>
+
+          <label for="description"><b></b>Description</label>
+          <input type="text" placeholder="Add Description" name="description" required>
+
+          <label for="num0fStaff">Number of Staff Needed</label>
+            <select id="staffNum" name="staffNum">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
+          <label for="skillsNeeded">Skills Needed</label>
+            <select id="skillsNeeded" name="skillsNeeded">
+              <option value="skill1">HTML Coding</option>
+              <option value="skill2">CSS Coding</option>
+              <option value="skill3">Web design</option>
+              <option value="skill4">Using Github</option>
+              <option value="skill5">Knowledge of Raspberry Pi</option>
+            </select>
+
+
+          <label for="Assign Staff">Assign Staff</label>
+            <select id="assignStaff" name="assignStaff">
+              <option value="staff1">John Smith</option>
+              <option value="staff2">Jane Dawson</option>
+              <option value="staff3">Micheal Sheen</option>
+              <option value="staff4">Tom Robinson</option>
+              <option value="staff5">Ellie Forbes</option>
+            </select>
+
+
+          <button type="createEvent" class="btn" action="/action_page.php">Create Event</button>
+          <button type="close" class="btn cancel" onclick="closeForm()" onclick="resetForm()">Close</button>
+
+
+        </form>
+        <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+
+        function resetForm() {
+          document.getElementById("myForm").reset();
+        }
+        </script>
+      </div>
+
+
+  <div id="FullWidth">
+    <div class="width25">
+      <h1 class="borderStyle">Calendar</h1>
+
+      <div class="month">
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>October<br><span style="font-size:18px">2019</span></li>
+  </ul>
+</div>
+
+  <ul class="weekdays">
+    <li>Mo</li>
+    <li>Tu</li>
+    <li>We</li>
+    <li>Th</li>
+    <li>Fr</li>
+    <li>Sa</li>
+    <li>Su</li>
+  </ul>
+
+  <ul class="days">
+    <li>30</li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+    <li>13</li>
+    <li>14</li>
+    <li>15</li>
+    <li>16</li>
+    <li>17</li>
+    <li>18</li>
+    <li>19</li>
+    <li>20</li>
+    <li>21</li>
+    <li>22</li>
+    <li>23</li>
+    <li>24</li>
+    <li>25</li>
+    <li>26</li>
+    <li>27</li>
+    <li><span class="active">28</span></li>
+    <li>29</li>
+    <li>30</li>
+    <li>31</li>
+  </ul>
+
+    </div>
+    <div class="width75">
+      <h1 class="borderStyle">Upcoming Events</h1>
+
+      <table id="EventList" class="width100">
+        <thead>
+          <tr>
+            <th>Date of Event</th>
+            <th>Event Name</th>
+            <th>Time</th>
+            <th>Staff</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>28/11/2019</td>
+            <td><a href="#" onclick="openEventForm()">Event One</a></td>
+            <td>14:00</td>
+            <td>Terry Graves, Jane Doe</td>
+            <!-- Add a profile pop-up form -->
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+          </tr>
+          <tr>
+            <td>12/12/2019</td>
+            <td><a href="#" onclick="openEventForm()">Event Two</a></td>
+            <td>12:00</td>
+            <td>John Doe, John Smith</td>
+            <!-- Add a profile pop-up form -->
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+          </tr>
+          <tr>
+            <td>26/01/2020</td>
+            <td><a href="#" onclick="openEventForm()">Event Three</a></td>
+            <td>17:00</td>
+            <td>Jane Dawson, Micheal Sheen</td>
+            <!-- Add a profile pop-up form -->
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+          </tr>
+          <tr>
+            <td>12/02/2020</td>
+            <td><a href="#" onclick="openEventForm()">Event Four</a></td>
+            <td>17:00</td>
+            <td>Micheal Sheen, Jane Dawson</td>
+            <!-- Add a profile pop-up form -->
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+          </tr>
+          <tr>
+            <td>24/08/2020</td>
+            <td><a href="#" onclick="openEventForm()">Event Five</a></td>
+            <td>12:30</td>
+            <td>James Miller, Scott Ryan</td>
+            <!-- Add a profile pop-up form -->
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+          </tr>
+          <tr>
+            <td>22/05/2020</td>
+            <td><a href="#" onclick="openEventForm()">Event Six</a></td>
+            <td>18:30</td>
+            <td>Ben Kerry, Brian Frost</td>
+            <!-- Add a profile pop-up form -->
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+          </tr>
+          <tr>
+            <td>02/01/2020</td>
+            <td><a href="#" onclick="openEventForm()">Event Seven</a></td>
+            <td>16:15</td>
+            <td>William Porter, Gary Pierce</td>
+            <!-- Add a profile pop-up form -->
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+          </tr>
+          <tr>
+            <td>17/03/2021</td>
+            <td><a href="#" onclick="openEventForm()">Event Eight</a></td>
+            <td>11:15</td>
+            <td>Matt Cooper, Brian Frost</td>
+            <!-- Add a profile pop-up form -->
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+          </tr>
+          <tr>
+            <td>18/11/2019</td>
+            <td><a href="#" onclick="openEventForm()">Event Nine</a></td>
+            <td>18:00</td>
+            <td>Howard Drake, Gary Pierce</td>
+            <!-- Add a profile pop-up form -->
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+          </tr>
+        </tbody>
+        <button onclick="sortTableAsc()">Sort by Earliest</button>
+        <button onclick="sortTableDesc()">Sort by Latest</button>
+        
+        <script>
+        function convertDate(date) {
+          var p = date.split("/");
+          return +(p[2]+p[1]+p[0]);
+        }
+
+        function sortTableAsc() {
+          var table, rows, switching, i, x, y, shouldSwitch;
+          table = document.getElementById("EventList");
+          switching = true;
+          while (switching) {
+            switching = false;
+            rows = table.rows;
+            for (i = 1; i < (rows.length - 1); i++) {
+              shouldSwitch = false;
+              x = rows[i].getElementsByTagName("td")[0];
+              y = rows[i + 1].getElementsByTagName("td")[0];
+              if (convertDate(x.innerHTML.toLowerCase()) > convertDate(y.innerHTML.toLowerCase())) {
+                shouldSwitch = true;
+                break;
+              }
+            }
+            if (shouldSwitch) {
+              rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+              switching = true;
+            }
+          }
+        }
+
+        function sortTableDesc() {
+          var table, rows, switching, i, x, y, shouldSwitch;
+          table = document.getElementById("EventList");
+          switching = true;
+          while (switching) {
+            switching = false;
+            rows = table.rows;
+            for (i = 1; i < (rows.length - 1); i++) {
+              shouldSwitch = false;
+              x = rows[i].getElementsByTagName("td")[0];
+              y = rows[i + 1].getElementsByTagName("td")[0];
+              if (convertDate(x.innerHTML.toLowerCase()) < convertDate(y.innerHTML.toLowerCase())) {
+                shouldSwitch = true;
+                break;
+              }
+            }
+            if (shouldSwitch) {
+              rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+              switching = true;
+            }
+          }
+        }
+        </script>
+
+
+              <div class="progressForm" id="progressForm">
+                  <form class="progressForm">
+                    <h1>Progress</h1>
+                    <label id="name"><b></b>Open day</label>
+
+                    <label id="date"><b></b>2nd of November 2019</label>
+                    <label id="time"><b>10AM - 2PM</b></label>
+
+                    <label id="assignedStaff"><b></b>Assigned Staff</label>
+                    <label class="container">John Smith
+                      <input type="checkbox" checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Jane Dawson
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Micheal Sheen
+                      <input type="checkbox" checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+
+                    <label id="description"><b></b>Description</label>
+                    <textarea readonly type="text" ROWS="5" COLS="90" name="descriptionOfEvent" id="textbox">Our Open Days are your opportunity to start an educational journey which not only provides you with detailed subject knowledge but also to become a skilled, capable graduate who is prepared for the world of work.</textarea>
+
+
+                      <label id="eventSkills">Skills Needed</label>
+                          <ol>
+                            <li>Web Design</li>
+                            <li>Knowledge of Raspberry Pi</li>
+                            <li>HTML</li>
+                          </ol>
+
+                    <button type="close" class="btn cancel" onclick="closeProgessForm()" onclick="resetProgressForm()">Close</button>
+                  </form>
+
+                  <script>
+                  function openProgressForm() {
+                    document.getElementById("progressForm").style.display = "block";
+                  }
+
+                  function closeProgessForm() {
+                    document.getElementById("progressForm").style.display = "none";
+                  }
+
+                  function resetProgressForm() {
+                    document.getElementById("progressForm").reset();
+                  }
+                  </script>
+                </div>
+
+                <div class="eventForm" id="eventForm">
+                    <form class="eventForm">
+                      <h1>Event</h1>
+                      <label id="name"><b></b>Open day</label>
+
+                      <label id="date"><b></b>2nd of November 2019</label>
+                      <label id="time"><b>10AM - 2PM</b></label>
+
+                      <label id="assignedStaff"><b></b>Assigned Staff</label>
+                      <label class="container">John Smith
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container">Jane Dawson
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container">Micheal Sheen
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+
+                      <label id="description"><b></b>Description</label>
+                      <textarea readonly type="text" ROWS="5" COLS="90" name="descriptionOfEvent" id="textbox">Our Open Days are your opportunity to start an educational journey which not only provides you with detailed subject knowledge but also to become a skilled, capable graduate who is prepared for the world of work.</textarea>
+
+
+                        <label id="eventSkills">Skills Needed</label>
+                            <ol>
+                              <li>Web Design</li>
+                              <li>Knowledge of Raspberry Pi</li>
+                              <li>HTML</li>
+                            </ol>
+
+                      <button type="close" class="btn cancel" onclick="closeEventForm()" onclick="resetEventForm()">Close</button>
+                    </form>
+
+                    <script>
+                    function openEventForm() {
+                      document.getElementById("eventForm").style.display = "block";
+                    }
+
+                    function closeEventForm() {
+                      document.getElementById("eventForm").style.display = "none";
+                    }
+
+                    function resetEventForm() {
+                      document.getElementById("eventForm").reset();
+                    }
+                    </script>
+                  </div>
+              </table>
+
+
+
+
+
+</body>
+
+</html>
