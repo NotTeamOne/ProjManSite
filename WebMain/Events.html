@@ -228,30 +228,146 @@ window.onclick = function(event) {
     <div class="width75">
       <h1 class="borderStyle">Upcoming Events</h1>
 
-      <table class="width100">
+      <table id="EventList" class="width100">
         <thead>
+          <tr>
+            <th>Date of Event</th>
             <th>Event Name</th>
             <th>Time</th>
-            <th>Date</th>
             <th>Staff</th>
             <th>Status</th>
+          </tr>
         </thead>
+        <tbody>
           <tr>
+            <td>28/11/2019</td>
             <td><a href="#" onclick="openEventForm()">Event One</a></td>
             <td>14:00</td>
-            <td>28/11/2019</td>
-            <td>John Smith, Jane Doe</td>
+            <td>Terry Graves, Jane Doe</td>
             <!-- Add a profile pop-up form -->
             <th><a href="#" onclick="openProgressForm()">Status</th>
           </tr>
           <tr>
+            <td>12/12/2019</td>
             <td><a href="#" onclick="openEventForm()">Event Two</a></td>
             <td>12:00</td>
-            <td>12/12/2019</td>
             <td>John Doe, John Smith</td>
             <!-- Add a profile pop-up form -->
             <th><a href="#" onclick="openProgressForm()">Status</th>
           </tr>
+          <tr>
+            <td>26/01/2020</td>
+            <td><a href="#" onclick="openEventForm()">Event Three</a></td>
+            <td>17:00</td>
+            <td>Jane Dawson, Micheal Sheen</td>
+            <!-- Add a profile pop-up form -->
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+          </tr>
+          <tr>
+            <td>12/02/2020</td>
+            <td><a href="#" onclick="openEventForm()">Event Four</a></td>
+            <td>17:00</td>
+            <td>Micheal Sheen, Jane Dawson</td>
+            <!-- Add a profile pop-up form -->
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+          </tr>
+          <tr>
+            <td>24/08/2020</td>
+            <td><a href="#" onclick="openEventForm()">Event Five</a></td>
+            <td>12:30</td>
+            <td>James Miller, Scott Ryan</td>
+            <!-- Add a profile pop-up form -->
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+          </tr>
+          <tr>
+            <td>22/05/2020</td>
+            <td><a href="#" onclick="openEventForm()">Event Six</a></td>
+            <td>18:30</td>
+            <td>Ben Kerry, Brian Frost</td>
+            <!-- Add a profile pop-up form -->
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+          </tr>
+          <tr>
+            <td>02/01/2020</td>
+            <td><a href="#" onclick="openEventForm()">Event Seven</a></td>
+            <td>16:15</td>
+            <td>William Porter, Gary Pierce</td>
+            <!-- Add a profile pop-up form -->
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+          </tr>
+          <tr>
+            <td>17/03/2021</td>
+            <td><a href="#" onclick="openEventForm()">Event Eight</a></td>
+            <td>11:15</td>
+            <td>Matt Cooper, Brian Frost</td>
+            <!-- Add a profile pop-up form -->
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+          </tr>
+          <tr>
+            <td>18/11/2019</td>
+            <td><a href="#" onclick="openEventForm()">Event Nine</a></td>
+            <td>18:00</td>
+            <td>Howard Drake, Gary Pierce</td>
+            <!-- Add a profile pop-up form -->
+            <th><a href="#" onclick="openProgressForm()">Status</th>
+          </tr>
+        </tbody>
+        <button onclick="sortTableAsc()">Sort by Earliest</button>
+        <button onclick="sortTableDesc()">Sort by Latest</button>
+        
+        <script>
+        function convertDate(date) {
+          var p = date.split("/");
+          return +(p[2]+p[1]+p[0]);
+        }
+
+        function sortTableAsc() {
+          var table, rows, switching, i, x, y, shouldSwitch;
+          table = document.getElementById("EventList");
+          switching = true;
+          while (switching) {
+            switching = false;
+            rows = table.rows;
+            for (i = 1; i < (rows.length - 1); i++) {
+              shouldSwitch = false;
+              x = rows[i].getElementsByTagName("td")[0];
+              y = rows[i + 1].getElementsByTagName("td")[0];
+              if (convertDate(x.innerHTML.toLowerCase()) > convertDate(y.innerHTML.toLowerCase())) {
+                shouldSwitch = true;
+                break;
+              }
+            }
+            if (shouldSwitch) {
+              rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+              switching = true;
+            }
+          }
+        }
+
+        function sortTableDesc() {
+          var table, rows, switching, i, x, y, shouldSwitch;
+          table = document.getElementById("EventList");
+          switching = true;
+          while (switching) {
+            switching = false;
+            rows = table.rows;
+            for (i = 1; i < (rows.length - 1); i++) {
+              shouldSwitch = false;
+              x = rows[i].getElementsByTagName("td")[0];
+              y = rows[i + 1].getElementsByTagName("td")[0];
+              if (convertDate(x.innerHTML.toLowerCase()) < convertDate(y.innerHTML.toLowerCase())) {
+                shouldSwitch = true;
+                break;
+              }
+            }
+            if (shouldSwitch) {
+              rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+              switching = true;
+            }
+          }
+        }
+        </script>
+
 
               <div class="progressForm" id="progressForm">
                   <form class="progressForm">
