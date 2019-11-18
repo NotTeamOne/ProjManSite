@@ -146,6 +146,20 @@
           <option value="staff5">Ellie Forbes</option>
         </select>
 
+        <label for="Tasks">Tasks</label>
+        <button id="taskButton" style="float: right">Add Task</button>
+        <br></br>
+        <table>
+          <tr>
+            <th>Description</th>
+            <th>Assigned Staff</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+        </table>
+<br></br>
+
 
         <button type="createEvent" class="btn" action="/action_page.php">Create Event</button>
         <button type="close" class="btn cancel" onclick="closeForm()" onclick="resetForm()">Close</button>
@@ -399,7 +413,6 @@
               <label id="description"><b></b>Description</label>
               <textarea readonly type="text" ROWS="5" COLS="90" name="descriptionOfEvent"
                 id="textbox">Our Open Days are your opportunity to start an educational journey which not only provides you with detailed subject knowledge but also to become a skilled, capable graduate who is prepared for the world of work.</textarea>
-
 
               <label id="eventSkills">Skills Needed</label>
               <ol>
