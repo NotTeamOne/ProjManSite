@@ -250,6 +250,8 @@ body {font-family: Verdana, sans-serif;}
   max-width: 500px;
   padding: 10px;
   background-color: white;
+  height: 500px;
+  overflow: auto;
 }
 
 /* Full-width input fields */
